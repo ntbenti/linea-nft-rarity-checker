@@ -1,4 +1,4 @@
-// src/App.js
+// rarity-checker-frontend/src/App.js
 
 import React, { useState } from 'react';
 import axios from 'axios';
@@ -19,7 +19,7 @@ function App() {
 
     setLoading(true);
     try {
-      const response = await axios.get(`http://localhost:3000/rarity/${tokenId}`);
+      const response = await axios.get(`http://localhost:4000/rarity/${tokenId}`); // Updated port to 4000
       setRarity(response.data);
       setError('');
     } catch (err) {

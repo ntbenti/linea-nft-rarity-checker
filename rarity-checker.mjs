@@ -38,7 +38,7 @@ if (!fs.existsSync(rarityDataDir)) {
 
 // Set up your RPC provider and contract details
 console.log("Setting up RPC provider and contract...");
-const provider = new ethers.JsonRpcProvider("https://linea-mainnet.g.alchemy.com/v2/lwVyN7bqhHAi2ETLGc3lFhkpcA-1YTgh"); // Replace with your RPC URL
+const provider = new ethers.JsonRpcProvider(process.env.RPC_URL); // Replace with your RPC URL
 const contractAddress = "0x34fb60d16D485cf35637041beF106a7B1EEFAb55"; // Replace with your contract address
 
 // Add the ERC721 ABI for required functions
